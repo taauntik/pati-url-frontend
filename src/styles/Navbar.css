@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Inconsolata:wght@200&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root {
+    --navbar-bg-color          : #F4F6FB;
+    --navbar-text-color        : #455164;
+    --navbar-btn-hover-color   : var(--navbar-bg-color);
+    --navbar-btn-hover-bgcolor : #1F2937;
+}
+
+.navbar {
+    display          : flex;
+    width            : 100%;
+    height           : calc((100vh / 17) + 30px);
+    align-items      : center;
+    background-color : var(--navbar-bg-color);
+    color            : var(--navbar-text-color);
+    box-shadow       : 0px 0px 3px 2px rgb(137 137 137 / 8%);;
+
+    .navbar__container {
+        display         : flex;
+        width           : inherit;
+        height          : inherit;
+        align-items     : inherit;
+        justify-content : space-between;
+        margin          : 0 10%;
+
+        .navbar__text {
+            font-weight : bold;
+            font-family : 'Agbalumo', sans-serif;
+            font-size   : 30px;
+            user-select : none;
+        }
+
+        .navbar__buttons {
+            & button {
+                font-weight    : 600;
+                font-size      : 18px;
+                text-transform : uppercase;
+                border         : none;
+                width          : 100px;
+                height         : 40px;
+                letter-spacing : 1px;
+                cursor         : pointer;
+                background     : none;
+                border-radius  : 4px;
+                color          : inherit;
+                
+                &:hover {
+                    color            : var(--navbar-btn-hover-color);
+                    background-color : var(--navbar-btn-hover-bgcolor);
+                }
+            }
+        }
+    }
+}
